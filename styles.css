@@ -1,0 +1,123 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+button#mode-toggle, button#toggle-de, button#toggle-en {
+    background: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 5px;
+    transition: color 0.3s;
+}
+
+main {
+    margin-top: 120px; /* Erhöhter Abstand zur Navigationsleiste */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #111;
+    color: #fff;
+}
+
+/* Button Hover Effects */
+button:hover, a:hover {
+    color: #ffcc00;
+}
+
+body.dark-mode {
+    background-color: #111;
+    color: #fff;
+}
+
+/* Additional Styling for Modern Look */
+main h1 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px; /* Erhöhter Abstand zur Navigationsleiste */
+}
+
+main p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+.donate-button {
+    background-color: #3B9CFF;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.donate-button:hover {
+    background-color: #0070E0;
+}
+/* Media Query für mobile Endgeräte */
+@media (max-width: 768px) {
+    nav li {
+        display: block; 
+        margin-right: 0; /* Entfernt den rechten Abstand zwischen den Elementen */
+        margin-bottom: 10px;
+    }
+
+    main {
+        margin-top: 60px;
+    }
+
+    main h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        margin-top: 100px;
+    }
+
+    main p {
+        font-size: 14px;
+    }
+
+    .donate-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
