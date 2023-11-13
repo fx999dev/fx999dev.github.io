@@ -38,13 +38,23 @@ var currentMode = localStorage.getItem('mode') || 'light-mode';
 function updateMode() {
     const body = document.body;
     const modeToggle = document.getElementById('mode-toggle');
-
+    const footerContent = document.getElementById('footer-content');
     if (currentMode === 'dark-mode') {
         body.classList.add('dark-mode');
         modeToggle.textContent = 'Light Mode';
+        if (footerContent != null)
+        {
+            footerContent.style.color = 'white';
+            footerContent.style.textDecoration = "underline";
+        }
     } else {
         body.classList.remove('dark-mode');
         modeToggle.textContent = 'Dark Mode';
+        if (footerContent != null)
+        {
+            footerContent.style.color = 'black';
+            footerContent.style.textDecoration = "underline";
+        }
     }
 }
 
@@ -57,6 +67,7 @@ function updateLanguage() {
     const navStartseite = document.querySelector('nav ul li:first-child a');
     const navDatenschutz = document.querySelector('nav ul li:nth-child(2) a');
     const donateButton = document.getElementById('donate-button');
+    const footerContent = document.getElementById('footer-content');
 
     if (currentLanguage === 'de') {
         if (mainHeading != null) {
@@ -73,6 +84,10 @@ function updateLanguage() {
         }
         if(donateButton != null) {
             donateButton.textContent = 'Jetzt Spenden';
+        }
+        if (footerContent != null)
+        {
+            footerContent.textContent = "Schreiben Sie mir eine E-Mail"
         }
         navStartseite.textContent = 'Startseite';
         navDatenschutz.textContent = 'Datenschutzrichtlinie';
@@ -91,6 +106,10 @@ function updateLanguage() {
         }
         if(donateButton != null) {
             donateButton.textContent = 'Donate now';
+        }
+        if (footerContent != null)
+        {
+            footerContent.textContent = "Write me an email"
         }
         navStartseite.textContent = 'Home';
         navDatenschutz.textContent = 'Privacy Policy';
