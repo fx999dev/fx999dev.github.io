@@ -66,7 +66,7 @@ function updateLanguage() {
     const privacyContent = document.getElementById('privacy-content');
     const navStartseite = document.querySelector('nav ul li:first-child a');
     const navDatenschutz = document.querySelector('nav ul li:nth-child(2) a');
-    const donateButton = document.getElementById('donate-button');
+    const donateButton = document.getElementById('donate');
     const footerContent = document.getElementById('footer-content');
 
     if (currentLanguage === 'de') {
